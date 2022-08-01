@@ -66,7 +66,7 @@ Los paquetes que usa el juego para ejecutarse, son SDL, Qt5 y YAML-cpp, dependie
 
 Como primer paso se debe clonar este repositorio con el siguiente comando:
 ```
-    git clone https://github.com/hhuzan/dune.git  
+    git clone https://github.com/juansburgos/Dune-2000.git  
 ```
 Después de eso se debe ingresar a la carpeta donde se clonó el repositorio, donde se tienen dos opciones de instalacion.
 
