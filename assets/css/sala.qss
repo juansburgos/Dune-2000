@@ -1,0 +1,16 @@
+QPushButton{
+    color: #ddde7f;
+    border-image: url(../assets/menu/button.jpeg);
+    min-width: 12em;
+    min-height: 1.5em;
+}
+
+QCheckBox::indicator {
+    width: 104px; 
+    height: 110px;
+}
+
+QListWidget{
+    background: black;
+    color: green;
+}

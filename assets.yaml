@@ -1,0 +1,210 @@
+---
+edificios:
+  0: # centro de construccion
+      energia: 0
+      costo: 0
+      dimensiones: [3, 3]
+      puntos de estructura: 3000
+
+  1: # fabrica ligera
+      energia: 500
+      costo: 800
+      dimensiones: [3, 3]
+      puntos de estructura: 500
+
+  2: #trampas de aire
+      energia: 500
+      costo: 800
+      dimensiones: [3, 3]
+      puntos de estructura: 500
+
+  3: #fabrica pesada
+      energia: 800
+      costo: 1500
+      dimensiones: [4, 4]
+      puntos de estructura: 1500
+
+  4: #refineria
+      energia: 400
+      costo: 500
+      dimensiones: [3, 3]
+      puntos de estructura: 1000
+      capacidad: 5000
+
+  5: #silo
+      energia: 100
+      costo: 200
+      dimensiones: [1, 1]
+      puntos de estructura: 200
+      capacidad: 1000
+
+  6: #cuartel
+      energia: 100
+      costo: 300
+      dimensiones: [2, 3]
+      puntos de estructura: 300
+
+  7: #palacio
+      energia: 800
+      costo: 2000
+      dimensiones: [3, 3]
+      puntos de estructura: 1000
+
+armamento:
+  rifles de asalto:
+      daño: 2
+      animacion: false
+      frecuencia: 6
+      bonificacion: {infanteria: 1}
+
+  cañon:
+      daño: 7
+      animacion: false
+      frecuencia: 1
+
+  lanza misiles:
+      daño: 8
+      animacion: true
+      frecuencia: 1
+
+  ondas de sonido:
+      daño: 4
+      animacion: true
+      frecuencia: 1
+      bonificacion: {infanteria: 4}
+
+  cañon 22mm:
+      daño: 6
+      animacion: false
+      frecuencia: 6
+      bonificacion: {vehiculos: 2, edificios: 2}
+
+  cañon de plasma:
+      daño: 8
+      animacion: true
+      frecuencia: 1
+      bonificacion: {vehiculos: 2, edificios: 2}
+
+unidades:
+  0: #infanteria ligera
+      clase: infanteria
+      edificios requeridos: [6]
+      arma: [rifles de asalto]
+      rango: 3
+      velocidad: 16
+      tiempo de entrenamiento: 1.3 # minutos
+      costo: 50
+      vida: 50
+
+  1: #fremen
+      clase: infanteria
+      casa: [1]
+      edificios requeridos: [6, 7]
+      arma: [rifles de asalto, lanza misiles]
+      rango: 3
+      velocidad: 20
+      tiempo de entrenamiento: 2 # minutos
+      costo: 100
+      vida: 50
+
+  2: #infanteria pesada
+      clase: infanteria
+      edificios requeridos: [6]
+      arma: [lanza misiles]
+      rango: 3
+      velocidad: 12
+      tiempo de entrenamiento: 1.3 # minutos
+      costo: 70
+      vida: 80
+
+  3: #sardaukar
+      clase: infanteria
+      casa: [0]
+      edificios requeridos: [6, 7]
+      arma: [rifles de asalto, lanza misiles]
+      rango: 3
+      velocidad: 12
+      tiempo de entrenamiento: 2 # minutos
+      costo: 100
+      vida: 80
+
+  4: #trike
+      clase: vehiculo
+      casa: [0, 1]
+      edificios requeridos: [1]
+      arma: [rifles de asalto]
+      rango: 4
+      velocidad: 64
+      tiempo de entrenamiento: 2 # minutos
+      costo: 100
+      vida: 80
+
+  5: #tanque sonico
+      clase: vehiculo
+      casa: [1]
+      edificios requeridos: [3, 7]
+      arma: [ondas de sonido]
+      rango: 4
+      velocidad: 12
+      tiempo de entrenamiento: 4 # minutos
+      costo: 300
+      vida: 300
+
+  6: #raider
+      clase: vehiculo
+      casa: [2]
+      edificios requeridos: [1]
+      arma: [cañon 22mm]
+      rango: 4
+      velocidad: 84
+      tiempo de entrenamiento: 2 # minutos
+      costo: 100
+      vida: 80
+
+  7: #desviador
+      clase: vehiculo
+      casa: [2]
+      edificios requeridos: [3, 7]
+      arma: [lanza misiles]
+      rango: 5
+      velocidad: 12
+      tiempo de entrenamiento: 4 # minutos
+      costo: 400
+      vida: 300
+
+  8: #tanque
+      clase: vehiculo
+      edificios requeridos: [3]
+      arma: [cañon]
+      rango: 4
+      velocidad: 40
+      tiempo de entrenamiento: 4 # minutos
+      costo: 300
+      vida: 30
+
+  9: #devastador
+      clase: vehiculo
+      casa: [0]
+      edificios requeridos: [3, 7]
+      arma: [cañon de plasma]
+      rango: 4
+      velocidad: 12
+      tiempo de entrenamiento: 5 # minutos
+      costo: 400
+      vida: 400
+
+  10:
+    clase: vehiculo
+    edificios requeridos: [3]
+    velocidad: 12
+    tiempo de entrenamiento: 3 # minutos
+    costo: 300
+    vida: 600
+
+cosechadora:
+    clase: vehiculo
+    edificios requeridos: [3]
+    velocidad: 12
+    tiempo de entrenamiento: 3 # minutos
+    costo: 300
+    vida: 600

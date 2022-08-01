@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /usr/local/share/Dune/bin
+/usr/local/share/Dune/bin/editor

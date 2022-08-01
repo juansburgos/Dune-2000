@@ -1,0 +1,167 @@
+QWidget {
+    font: 15pt;
+}
+
+QPushButton{
+    color:#ddde7f;
+    border-image: url(../assets/menu/button.jpeg);
+    min-width: 12em;
+    min-height: 1.5em;
+}
+
+#crear {
+    background-image: url(../assets/menu/f1.jpg);
+}
+
+QListView {
+    color: #ddde7f;
+    border: 10px solid brown;
+    background-color: black;
+    font: 20pt
+}
+
+QListView::item {
+    height: 40px;
+}
+
+QListView::item:selected {
+    color: #ddde7f;
+    border: 1px solid rgb(42, 165, 83);
+    border-radius: 5px;
+    font: 22pt;
+}
+
+QGroupBox {
+    color: #ddde7f;
+}
+
+QGroupBox::title {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #603f20;
+    padding: 0.3em 0px;
+    font: 12pt;
+    color: #ddde7f;
+}
+
+QLabel {
+    color:#ddde7f;
+    height: 20px;
+}
+
+QCheckBox {
+    color: #ddde7f;
+}
+
+QCheckBox::indicator {
+    width: 104px; 
+    height: 110px;
+}
+
+QCheckBox#Atreides::indicator:unchecked {
+    background-image: url(../assets/menu/atreides.jpeg);
+}
+
+QCheckBox#Atreides::indicator:checked {
+    height: 105px;
+    background-image: url(../assets/menu/atreides.jpeg);
+    border: 2px solid blue;
+    color: blue;
+}
+
+QCheckBox#Atreides::checked {
+    color:blue;
+}
+
+QCheckBox#Harkonnen::indicator:unchecked {
+    background-image: url(../assets/menu/harkonnen.jpeg);
+}
+
+QCheckBox#Harkonnen::indicator:checked {
+    height: 105px;
+    background-image: url(../assets/menu/harkonnen.jpeg); 
+    border: 2px solid red;
+}
+
+QCheckBox#Harkonnen::checked {
+    color: red;
+}
+
+QCheckBox#Ordos::indicator:unchecked {
+    background-image: url(../assets/menu/ordos.jpeg);
+}
+
+QCheckBox#Ordos::indicator:checked {
+    height: 105px;
+    background-image: url(../assets/menu/ordos.jpeg);
+    border: 2px solid green;
+}
+
+QCheckBox#Ordos::checked {
+    color: green;
+}
+
+QScrollBar:horizontal {              
+    border: 2px solid #603f20;
+    background-image: url(../assets/menu/scrollH.jpeg);
+    height: 18px;
+    width: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    border-image: url(../assets/menu/handleScrollH.jpeg);
+    margin: 0px 20px 0px 20px; 
+}
+
+QScrollBar::add-line:horizontal {
+    border: 2px solid #603f20;
+    background-color: black;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 2px solid #603f20;
+    background-color: black; 
+}
+
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid #603f20;
+    width: 1px;
+    height: 1px;
+    background: #603f20;
+}
+
+QScrollBar:vertical {              
+    border: 2px solid #603f20;
+    background-image: url(../assets/menu/scrollV.jpeg);
+    width: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    border-image: url(../assets/menu/handleScrollV.jpeg);
+    margin: 20px 0px 20px 0px; 
+}
+
+QScrollBar::add-line:vertical {
+    border: 2px solid #603f20;
+    background-color: black;
+}
+
+QScrollBar::sub-line:vertical {
+    border: 2px solid #603f20;
+    background-color: black; 
+}
+
+QScrollBar:up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid #603f20;
+    width: 1px;
+    height: 1px;
+    background: #603f20;
+}
+
+QLineEdit {
+    color: #ddde7f;
+    border: 2px solid #603f20;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: auto;
+}

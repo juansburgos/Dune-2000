@@ -1,0 +1,61 @@
+language: cpp
+
+env:
+  global:
+    # Ubuntu version
+    - LINUX_DIST=focal
+    - DEPS_DIR=${TRAVIS_BUILD_DIR}/deps
+    # Global build options and C++ flags
+    - CXX_FLAGS="-Wall -Wpedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow -lpthread"
+    # Misc
+    - RUN_TESTS=true
+    - COVERAGE=true
+
+matrix:
+  include:
+    - os: linux
+      dist: focal
+      sudo: true
+      compiler:
+        - c++
+      addons:
+       apt:
+         packages: 
+           - lcov
+           - cmake
+           - libsdl2-dev
+           - libsdl2-image-dev
+           - libsdl2-ttf-dev
+           - qt5-default
+           - libyaml-cpp-dev
+
+before_install:
+    # Combine global build options with OS/compiler-dependent options
+    - export CMAKE_OPTIONS=${CMAKE_OPTIONS}" "${ENV_CMAKE_OPTIONS}
+    - export CXX_FLAGS=${CXX_FLAGS}" "${ENV_CXX_FLAGS}
+
+install:
+    - echo ${PATH}
+    - echo ${CXX}
+    - ${CXX} --version
+    - ${CXX} -v
+    - sudo pip install codecov
+
+script:
+    ############################################################################
+    # Build main and tests
+    ############################################################################
+    - mkdir -p build
+    - cd build
+    - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} -DCMAKE_BUILD_TYPE=Coverage ..
+    - make
+    - make dune_coverage
+    - ctest
+
+after_success:
+    #- bash <(curl -s https://codecov.io/bash) -t 9cdde2e9-67b4-449f-b438-c9cedb3abea9
+    - lcov --directory . --capture --output-file coverage.info
+    - lcov --remove coverage.info '/usr/*' '*/googletest/*' '*/lib/gtest*/*' '*/gtest/*' "${HOME}"'/.cache/*' --output-file coverage.info
+    - lcov --list coverage.info
+    - bash <(curl -s https://codecov.io/bash) -f coverage.info -t 9cdde2e9-67b4-449f-b438-c9cedb3abea9 || echo "Codecov did not collect coverage reports"
+    #- codecov -t 9cdde2e9-67b4-449f-b438-c9cedb3abea9

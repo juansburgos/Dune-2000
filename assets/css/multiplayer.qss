@@ -1,0 +1,106 @@
+QWidget {
+    font: 15pt;
+}
+QPushButton{
+    color:#ddde7f;
+    border-image: url(../assets/menu/button.jpeg);
+    min-width: 12em;
+    min-height: 1.5em;
+}
+
+QListWidget{
+    border: 5px solid #603f20;
+    background: black;
+    color: #ddde7f;
+    font-size: 20pt;
+    margin: 15px;
+}
+
+QListView::item {
+    height: 40px;
+}
+
+QListView::item:selected {
+    color: #ddde7f;
+    border: 1px solid rgb(42, 165, 83);
+    border-radius: 5px;
+    font-size: 40;
+}
+
+QGroupBox {
+    margin-top: 6px;
+}
+
+QGroupBox::title {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0px 5px 0px 5px;
+    font: 12pt;
+    color: #ddde7f;
+}
+
+QWidget#multiplayer{
+    background-image: url(../assets/menu/crearDune.jpg)
+}
+
+QLabel {
+    color:#ddde7f;
+}
+
+QScrollBar:horizontal {              
+    border: 2px solid #603f20;
+    background-image: url(../assets/menu/scrollH.jpeg);
+    height: 18px;
+    width: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:horizontal {
+    border-image: url(../assets/menu/handleScrollH.jpeg);
+    margin: 0px 20px 0px 20px; 
+}
+
+QScrollBar::add-line:horizontal {
+    border: 2px solid #603f20;
+    background-color: black;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: 2px solid #603f20;
+    background-color: black; 
+}
+
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+    border: 2px solid #603f20;
+    width: 1px;
+    height: 1px;
+    background: #603f20;
+}
+
+QScrollBar:vertical {              
+    border: 2px solid #603f20;
+    background-image: url(../assets/menu/scrollV.jpeg);
+    width: 18px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    border-image: url(../assets/menu/handleScrollV.jpeg);
+    margin: 20px 0px 20px 0px; 
+}
+
+QScrollBar::add-line:vertical {
+    border: 2px solid #603f20;
+    background-color: black;
+}
+
+QScrollBar::sub-line:vertical {
+    border: 2px solid #603f20;
+    background-color: black; 
+}
+
+QScrollBar:up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid #603f20;
+    width: 1px;
+    height: 1px;
+    background: #603f20;
+}

@@ -1,0 +1,51 @@
+QWidget {
+    font: 15pt;
+}
+
+QPushButton{
+    color:#ddde7f;
+    border-image: url(../assets/menu/button.jpeg);
+    min-width: 12em;
+    min-height: 1.5em;
+    font: 20 "Dune2k";
+}
+
+QPushButton:hover{
+    background-image: dimgrey;
+    min-width: 10em;
+}
+
+#Main {
+    border-image: url(../assets/menu/menu.jpg);
+    background-origin: content;
+}
+
+#Conectar {
+    border-image: url(../assets/menu/menu.jpg);
+    background-origin: content;
+}
+
+QLabel {
+    color: #ddde7f;
+    border: 2px solid #603f20;
+    border-radius: 2px;
+    background-color: black;
+    margin: 2px 5px 2px 5px;
+}
+
+QLineEdit {
+    color: #ddde7f;
+    border: 2px solid #603f20;
+    background-color: black;
+    height: auto;
+}
+
+QDialog {
+    background-color: #603f20;
+    color: #ddde7f;
+    font: 15pt "Dune2k";
+}
+
+QDialog QPushButton {
+    font: 15pt "Dune2k";
+}

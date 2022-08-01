@@ -1,0 +1,8 @@
+#!/bin/bash
+cd /usr/local/share/Dune/bin
+if [ -z "$1" ]
+    then /usr/local/share/Dune/bin/dune_server
+    exit
+fi
+
+/usr/local/share/Dune/bin/dune_server "$1"
