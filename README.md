@@ -1,14 +1,10 @@
-# Dune
+# Dune 2000
 
 [![Build Status][travis-badge]][travis-link]
-[![codecov][codecov-badge]][codecov-link]
 
 [travis-badge]:    https://app.travis-ci.com/hhuzan/dune.svg?token=jcG6bmaHoQz9k4mjZ2nA&branch=main
 
 [travis-link]:     https://travis-ci.com/hhuzan/dune
-
-[codecov-badge]:   https://codecov.io/gh/hhuzan/dune/branch/main/graph/badge.svg?token=NOgaNuLSao
-[codecov-link]:    https://codecov.io/gh/hhuzan/dune
 
 
 # Taller de programacion I - Catedra Veiga - FIUBA
